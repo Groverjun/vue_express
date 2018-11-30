@@ -16,9 +16,11 @@
     "element-ui": "^2.4.0",
     "html2canvas": "^1.0.0-alpha.12",
     "jquery": "^3.3.1",
+    "socket.io-client": "^2.2.0",
     "vue": "^2.5.2",
     "vue-ckeditor": "^1.0.0",
     "vue-router": "^3.0.1",
+    "vue-socket.io": "^3.0.4",
     "vuex": "^3.0.1"
   },
   "devDependencies": {

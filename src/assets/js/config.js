@@ -6,5 +6,5 @@ export const STATUS = 'status'    // 后台返回的状态码，如 code status 
 
 export const baseURL = {
    dev: 'http://localhost:3000/',
-// dev: '',
+// dev: '/',
 }

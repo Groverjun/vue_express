@@ -1,8 +1,11 @@
 <template>
-	<div class="drag">
+	<div>
+		<a href="#/home">返回主页</a>
+		<div class="drag">
 			<div class="drag_bg"></div>
 			<div class="drag_text">{{confirmWords}}</div>
 			<div @mousedown="mousedownFn($event)" class="handler handler_bg"></div>
+		</div>
 	</div>
 </template>
 

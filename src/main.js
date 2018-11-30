@@ -15,6 +15,13 @@ Vue.use(ElementUI)
 //echarts
 import echarts from 'echarts'
 Vue.prototype.$echarts = echarts 
+//VueSocketio
+import VueSocketio from 'vue-socket.io';
+Vue.use(new VueSocketio({
+    debug: false,
+    connection: 'http://localhost:3000',
+    
+}))
 //xhr
 import {xhr} from '@/assets/js/api'
 Vue.prototype.$xhr = xhr
