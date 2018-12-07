@@ -3,37 +3,23 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
-
+const proxyConfig = require('./proxyConfig')
 module.exports = {
   dev: {
-
-    // Paths
+    // 打包时修改   proxyTable  
+    port: 8080, 
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {},
-
-    // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+//  proxyTable: proxyConfig.proxy,//跨域
+		cssSourceMap: true,
+    host: 'localhost',
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
-    poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
-
-    
-    /**
-     * Source Maps
-     */
-
-    // https://webpack.js.org/configuration/devtool/#development
+    poll: false, 
     devtool: 'cheap-module-eval-source-map',
-
-    // If you have problems debugging vue-files in devtools,
-    // set this to false - it *may* help
-    // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
-
-    cssSourceMap: true
   },
 
   build: {

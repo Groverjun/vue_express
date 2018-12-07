@@ -7,6 +7,9 @@ import qs from 'qs'
  * @param  {Object} params {key: '汉字'}
  * @return {Object}        {key: '%E6%B1%89%E5%AD%97'}
  */
+const headersForm={'Content-Type': 'multipart/form-data'}
+const headersjson={'Content-Type': 'application/json;charset=UTF-8'}
+const headerswww={'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
 export const handleChinese = function (params) {
   const pattern = new RegExp("[\u4E00-\u9FA5]+") // 正则匹配中文字符
   let newObj = {}
@@ -19,21 +22,26 @@ export const handleChinese = function (params) {
 }
 
 // axios 配置   prod  测试的ip   dev  开发的ip
+/*
+ 	
+ * 
+ * */
 export const xhr = axios.create({
   baseURL: baseURL.dev,
   timeout: TIMEOUT,
-  headers: {
-//  'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-    'Content-Type': 'application/json;charset=UTF-8'
-  }
+headers: headerswww
 })
 
 //添加请求拦截器
 xhr.interceptors.request.use(function (config) {
   // 如果请求是 post 的请求 用qs 配置下 请求参数
   if (config.method === 'post') {
-//  config.data = qs.stringify(config.data)
-    config.data = JSON.stringify(config.data)
+	if(config.data instanceof FormData){
+		//console.log("这是一个form对象")
+	}else{
+		config.data = qs.stringify(config.data)
+//		config.data = JSON.stringify(config.data)
+	}
     return config
   }
 
@@ -68,7 +76,7 @@ xhr.interceptors.response.use(function (response) {
 //  console.error(msg)
     return Promise.reject(response.data)
   }
-}, function (error) {
+},function (error) {
   console.error('Request failed')
 //window.location.href="#/"
   return Promise.reject(error)

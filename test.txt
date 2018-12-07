@@ -1,0 +1,20 @@
+this.$xhr.post("/first",{
+		name:this.name,
+}).then((res)=>{
+	
+}).catch((error)=>{
+
+	console.error(error)
+	
+});
+this.$xhr.get("/first",{
+	params{
+		name:this.name,
+	}
+}).then((res)=>{
+	
+}).catch((error)=>{
+
+	console.error(error)
+	
+});  

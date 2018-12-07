@@ -20,7 +20,6 @@ export default{
           message: res.datas
         });
     },
-    
     customEmit: function(val){
     	console.log(val)
       console.log('this method was fired by the socket server. eg: io.emit("customEmit", data)')
