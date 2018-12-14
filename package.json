@@ -22,6 +22,9 @@
     "socket.io-client": "^2.2.0",
     "vue": "^2.5.2",
     "vue-ckeditor": "^1.0.0",
+    "vue-ckeditor2": "^2.1.1",
+    "vue-cropper": "^0.4.6",
+    "vue-quill-editor": "^3.0.6",
     "vue-router": "^3.0.1",
     "vue-socket.io": "^3.0.4",
     "vuex": "^3.0.1"

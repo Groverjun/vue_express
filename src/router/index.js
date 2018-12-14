@@ -5,8 +5,10 @@ import login from '@/components/login'
 import message from '@/components/messagePage/message'
 import data from '@/components/dataPage/data'
 import markdown from '@/components/markdown/markdown'
+import ckeditor from '@/components/markdown/ckeditor'
 import img from '@/components/upimg/img'
 import sentenceday from '@/components/sentenceday/sentenceday'
+import cropper from '@/components/cropper/cropper'
 
 Vue.use(Router)
 
@@ -34,6 +36,11 @@ const router = new Router({
 					    component: markdown,
 					},
 					{
+					    path: '/home/ckeditor',
+					    name: 'ckeditor',
+					    component: ckeditor,
+					},
+					{
 					    path: '/home/sentenceday',
 					    name: 'sentenceday',
 					    component: sentenceday,
@@ -42,6 +49,11 @@ const router = new Router({
 					    path: '/home/img',
 					    name: 'img',
 					    component: img,
+					},
+					{
+					    path: '/home/cropper',
+					    name: 'cropper',
+					    component: cropper,
 					},
 		      ],redirect:'/home/markdown'
 		    },

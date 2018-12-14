@@ -32,6 +32,18 @@ Vue.prototype.$xhr = xhr
 import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
 Vue.use(mavonEditor)
+
+//VueQuillEditor
+import  VueQuillEditor from 'vue-quill-editor'
+// require styles 引入样式
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+
+Vue.use(VueQuillEditor)
+//VueCropper
+import VueCropper from 'vue-cropper' 
+Vue.use(VueCropper)
 //css
 import'./assets/css/index.css'
 import'./assets/css/animate.min.css'
