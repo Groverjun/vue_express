@@ -1,6 +1,6 @@
 <template>
 <div class=''>
-    
+
 </div>
 </template>
 
@@ -16,10 +16,15 @@ return {
 computed: {},
 watch: {},
 methods: {
-
+    fun(){
+        console.log("测试测试")
+    }
+    
 },
 created() {
-
+    console.log();
+    JSON.stringify();
+    JSON.parse();
 },
 mounted() {
 
